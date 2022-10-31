@@ -1,3 +1,9 @@
+# Stop at break point for test. --trace to avoid timeout
+# iex -S mix test <file/path> --trace
+
+# Print out the stackback
+IO.inspect(Process.info(self(), :current_stacktrace), label: "STACKTRACE")
+
 # Dynamically call module attributes
 def Mymodule do
   @source_workday "workday"
